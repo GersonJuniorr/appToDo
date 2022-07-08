@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Todo } from './models/todo.model';
 
@@ -16,6 +16,7 @@ export class AppComponent {
   mode: string = 'list'
 
   constructor(private fb: FormBuilder) {
+    localStorage.setItem('tasks', JSON.stringify([]))
     this.form = fb.group({
       title: ['', Validators.compose([
         Validators.minLength(3),
