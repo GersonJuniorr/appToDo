@@ -66,30 +66,30 @@ ul {
     list-style: none;
     background: #DCF5E6;
     border-radius: 10px;
-  }
+}
   
-  li {
+li {
     padding: 15px;
     margin: 10px;
     margin-left: 20px;
     font-size: 1em;
     font-style: italic;
     border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-  }
+}
   
-  li>button {
+li>button {
     border: none;
     background-color: #DCF5E6;
     font-size: 1em;
     float: right;
     opacity: 0.6;
     transition: opacity 1s;
-  }
+}
   
-  li>button:hover {
+li>button:hover {
     opacity: 1;
     transition: opacity 1s;
-  }
+}
 
 .smallNone {
     text-align: center;
