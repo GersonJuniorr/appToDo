@@ -1,0 +1,98 @@
+.title {
+    display: flex;
+    justify-content: center;
+    font-family: 'Dancing Script', cursive;
+    color: #fff;
+    font-size: 5em;
+    text-shadow: 3px 5px #000;
+}
+
+.container_todo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    height: 50%;
+    margin: 0 auto; 
+    border-radius: 10px;
+    background-color: #DCF5E6;
+    -webkit-box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
+    -moz-box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
+    box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
+    overflow: scroll;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+.divButtonSwitch {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.btnSwitch {
+    font-size: 17px;
+    border-radius: 10px;
+    border: none;
+    background-color: #DCF5E6;
+    margin-top: 2vw;
+    width: 35%;
+    height: 50px;
+}
+
+.inputToDo {
+    width: 350px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+.btnCheck, .btnRemover {
+    color: grey;
+    font-size: 18px;
+    border: none;
+    background-color: transparent;
+}
+
+ul {
+    text-align: left;
+    margin: 10px;
+    padding: 10px;
+    list-style: none;
+    background: #DCF5E6;
+    border-radius: 10px;
+  }
+  
+  li {
+    padding: 15px;
+    margin: 10px;
+    margin-left: 20px;
+    font-size: 1em;
+    font-style: italic;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  }
+  
+  li>button {
+    border: none;
+    background-color: #DCF5E6;
+    font-size: 1em;
+    float: right;
+    opacity: 0.6;
+    transition: opacity 1s;
+  }
+  
+  li>button:hover {
+    opacity: 1;
+    transition: opacity 1s;
+  }
+
+.smallNone {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+}
