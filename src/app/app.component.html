@@ -13,7 +13,7 @@
     <form id="dadosForm" [formGroup]="form" *ngIf="mode == 'add'">
       <fieldset>
         <input class="inputToDo" type="text" id="inputTask" name="inputTask" [(ngModel)]="inputTask" placeholder="Titulo da tarefa" maxlength="60" formControlName="task">
-        <small *ngIf="!form">Este campo deve conter entre 3 e 60 caracteres</small>
+        <small *ngIf="">Este campo deve conter entre 3 e 60 caracteres</small>
         <button class="btnSubmit" type="submit" (click)="add()">Salvar</button>
       </fieldset>
     </form>
