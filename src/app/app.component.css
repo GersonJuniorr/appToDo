@@ -23,7 +23,7 @@
 
 ul {
     width: 100%;
-    overflow: scroll;
+    overflow: auto;
     max-height: 50vh;
 }
 
@@ -33,9 +33,10 @@ ul {
     border-radius: 10px;
     line-height: 50px;
     text-indent: 10px;
+    color: #fff;
     font-size: 1.2em;
     border: 1px solid grey;
-    background-color: #DCF5E6;
+    background-color: #84B6f4;
     margin-bottom: 15px;
 }
 
@@ -48,21 +49,22 @@ fieldset {
 .divButtonSwitch {
     display: flex;
     justify-content: center;
-    
+    color: #fff;
 }
 
 .btnSwitch {
     font-size: 17px;
     border-radius: 10px;
     border: none;
-    background-color: #ce774a;
+    background-color: #5086c1;
+    color: #fff;
     margin-top: 2vw;
     width: 25%;
     height: 50px;
 }
 
 .btnCheck, .btnRemover {
-    color: grey;
+    color: #fff;
     font-size: 18px;
     border: none;
     background-color: transparent;
@@ -73,12 +75,14 @@ ul {
     margin: 10px;
     padding: 10px;
     list-style: none;
-    background: #DCF5E6;
+    background: #84B6f4;
     border-radius: 10px;
 }
   
 li {
     padding: 15px;
+    color: #fff;
+    font-weight: 600;
     margin: 10px;
     margin-left: 20px;
     font-size: 1em;
@@ -88,7 +92,7 @@ li {
   
 li>button {
     border: none;
-    background-color: #DCF5E6;
+    background-color: #84b6f4;
     font-size: 1em;
     float: right;
     opacity: 0.6;
@@ -112,7 +116,8 @@ li>button:hover {
     font-size: 17px;
     border-radius: 10px;
     border: none;
-    background-color: #ce774a;
+    background-color: #5086c1;
+    color: #fff;
     margin-top: 2vw;
     width: 40%;
     height: 50px;
