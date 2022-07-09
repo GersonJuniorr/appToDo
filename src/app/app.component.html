@@ -1,22 +1,23 @@
 <h1 class="title">Lista de Tarefas</h1>
 <div class="container_todo">  
-  <h1 *ngIf="mode == 'add'">Nova Tarefa</h1>
   <small class="smallNone" *ngIf="todos.length == 0 && mode == 'list'">Você não tem tarefas para hoje <br> Aproveite seu dia!</small>
-  <ul *ngIf="mode == 'list'">
+  <ul *ngIf="mode == 'list' && todos.length != 0">
     <li *ngFor="let todo of todos">
       {{ todo.task }}    
       <button class="btnRemover" (click)="removerTask(todo)"><i class="far fa-trash-alt"></i></button>
-      <button class="btnRemover" *ngIf="todo.done" (click)="refazerTask(todo)"><i class="fas fa-sync-alt fa-spin"></i></button>
-      <button class="btnCheck" *ngIf="!todo.done" (click)="concluirTask(todo)"><i class="far fa-check-circle"></i></button>
+      <button class="btnRemover" *ngIf="!todo.done" (click)="refazerTask(todo)"><i class="fas fa-sync-alt fa-spin"></i></button>
+      <button class="btnCheck" *ngIf="todo.done" (click)="concluirTask(todo)"><i class="far fa-check-circle"></i></button>
   </ul>
-
-  <form id="dadosForm" [formGroup]="form" *ngIf="mode == 'add'">
-    <fieldset>
-      <input class="inputToDo" type="text" id="inputTask" name="inputTask" [(ngModel)]="inputTask" placeholder="Titulo da tarefa" maxlength="60" formControlName="task">
-      <small *ngIf="!form">Este campo deve conter entre 3 e 60 caracteres</small>
-      <button type="submit" (click)="add()">Salvar</button>
-    </fieldset>
-  </form>
+  <div class="container_form" *ngIf="mode == 'add'">
+    <h1 *ngIf="mode == 'add'" class="tittleAdd">Nova Tarefa</h1>
+    <form id="dadosForm" [formGroup]="form" *ngIf="mode == 'add'">
+      <fieldset>
+        <input class="inputToDo" type="text" id="inputTask" name="inputTask" [(ngModel)]="inputTask" placeholder="Titulo da tarefa" maxlength="60" formControlName="task">
+        <small *ngIf="!form">Este campo deve conter entre 3 e 60 caracteres</small>
+        <button class="btnSubmit" type="submit" (click)="add()">Salvar</button>
+      </fieldset>
+    </form>
+  </div>
 </div>
 <div class="divButtonSwitch" *ngIf="mode == 'list'">
   <button class="btnSwitch" (click)="changedMode('add')">Adicionar nova tarefa</button>

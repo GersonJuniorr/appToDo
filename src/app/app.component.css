@@ -9,17 +9,34 @@
 
 .container_todo {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 40%;
-    height: 50%;
-    margin: 0 auto; 
+    margin: 0 auto;
+    padding: 10px;
+    list-style: none;
+    min-width: 35%;
+    max-width: max-content;
+    background: #fff;
     border-radius: 10px;
-    background-color: #DCF5E6;
     -webkit-box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
     -moz-box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
-    box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
+    box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);  
+}
+
+ul {
+    width: 100%;
     overflow: scroll;
+    max-height: 50vh;
+}
+
+.inputToDo {
+    width: 100%;
+    font-size: 17px;
+    border-radius: 10px;
+    line-height: 50px;
+    text-indent: 10px;
+    font-size: 1.2em;
+    border: 1px solid grey;
+    background-color: #DCF5E6;
+    margin-bottom: 15px;
 }
 
 fieldset {
@@ -38,18 +55,10 @@ fieldset {
     font-size: 17px;
     border-radius: 10px;
     border: none;
-    background-color: #DCF5E6;
+    background-color: #ce774a;
     margin-top: 2vw;
-    width: 35%;
+    width: 25%;
     height: 50px;
-}
-
-.inputToDo {
-    width: 350px;
-    height: 50px;
-    border: none;
-    border-radius: 10px;
-    font-size: 17px;
 }
 
 .btnCheck, .btnRemover {
@@ -92,7 +101,34 @@ li>button:hover {
 }
 
 .smallNone {
+    width: 100%;
+    margin: 30px;
     text-align: center;
-    margin-top: 20px;
     font-size: 16px;
 }
+
+.btnSubmit {
+    margin: 0 auto;
+    font-size: 17px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ce774a;
+    margin-top: 2vw;
+    width: 40%;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.container_form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.tittleAdd {
+    font-weight: 300;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+

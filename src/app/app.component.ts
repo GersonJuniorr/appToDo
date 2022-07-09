@@ -11,12 +11,12 @@ export class AppComponent {
   title: string = 'Minhas Tarefas';
 
   public form: FormGroup;
-  public todos: Todo[] = [];
+  public todos: Todo[] = [ ];
   public inputTask: any;
   mode: string = 'list'
 
   constructor(private fb: FormBuilder) {
-    localStorage.setItem('tasks', JSON.stringify([]))
+    
     this.form = fb.group({
       title: ['', Validators.compose([
         Validators.minLength(3),
@@ -25,6 +25,7 @@ export class AppComponent {
       ])]
     })
 
+    this.todos.push(new Todo(1, 'ola', false))
     this.load();
   }
 
@@ -32,7 +33,7 @@ export class AppComponent {
     const form = (<HTMLSelectElement>document.getElementById('inputTask')).value
     const id = this.todos.length + 1;
     this.todos.push(new Todo(id, form, false));
-    this.save()
+    this.save();
     this.changedMode('list')
   }
 
@@ -46,12 +47,12 @@ export class AppComponent {
   }
 
   concluirTask(todo: Todo) {
-    todo.done = true;
+    todo.done = false;
     this.save();
   }
 
   refazerTask(todo: Todo) {
-    todo.done = false;
+    todo.done = true;
     this.save();
   }
 
@@ -61,7 +62,12 @@ export class AppComponent {
   }
 
   load() {
-    this.todos = JSON.parse(localStorage.getItem('tasks') || '{}');
+    const data = localStorage.getItem('tasks');
+    if(data) {
+      this.todos = JSON.parse(data);
+    } else {
+      this.todos = [];
+    }
   }
 
   changedMode(mode: any) {
